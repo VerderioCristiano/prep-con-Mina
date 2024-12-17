@@ -1,7 +1,6 @@
 export interface ListaPokemon {
     count: number
     next: string
-    previous: any
     results: Result[]
   }
   

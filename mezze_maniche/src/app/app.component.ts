@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ListaPokemon } from './model';
+
 import { HttpClient } from '@angular/common/http';
+import { ListaPokemon } from './model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,12 +14,13 @@ export class AppComponent {
   mialista!: ListaPokemon;
 
   constructor(public http : HttpClient){
-    this.o = this.http.get<ListaPokemon>(https://pokeapi.co/api/v2/type);
+    this.o = this.http.get<ListaPokemon> ("https://pokeapi.co/api/v2/type");
     this.o.subscribe(this.getData);
   }
 
-  getData = (this.getData : ListaPokemon) => {
+  getData = (getData : ListaPokemon) => {
     this.mialista = getData;
+    console.log(this.mialista)
   }
 
 
