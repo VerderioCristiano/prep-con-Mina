@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { HttpClient } from '@angular/common/http';
-import { ListaPokemon } from './model';
+import { ListaPokemon } from '../model';
+
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-lista-pokemon',
+  templateUrl: './lista-pokemon.component.html',
+  styleUrls: ['./lista-pokemon.component.css']
 })
-export class AppComponent {
+export class ListaPokemonComponent {
   o!: Observable<ListaPokemon>
   title = 'mezze_maniche';
   mialista!: ListaPokemon;
@@ -22,6 +24,7 @@ export class AppComponent {
     this.mialista = getData;
     console.log(this.mialista)
   }
+
 
 
 }

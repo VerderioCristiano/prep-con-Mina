@@ -1,8 +1,8 @@
 
-<div *ngFor="let element of mialista.results">
-    <a [routerLink]="'pokemon/' + element.name">{{ element.name }}</a>
-  </div>
 
 
+<router-outlet><div *ngFor="let element of mialista.results">
+  <a [routerLink]="'pokemon/' + element.name">{{ element.name }}</a>
+</div>
 
-<router-outlet></router-outlet>
+</router-outlet>
