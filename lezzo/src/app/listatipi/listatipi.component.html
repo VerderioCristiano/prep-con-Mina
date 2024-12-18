@@ -1,0 +1,4 @@
+<h1>POKEMON</h1>
+<div *ngFor="let TipiPoke of poke.results">
+    <a routerLink="/type/{{TipiPoke.name}}">{{TipiPoke.name}}</a>
+</div>
